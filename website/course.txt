@@ -1,0 +1,6 @@
+car manaagement:
+crud op          method     url       base server :http://localhost:8080
+                 verb       noun
+create car       pOST       /cars
+put----edit
+post-----create//insert
