@@ -1,2 +1,0 @@
-module sowjanya.com/main
-
