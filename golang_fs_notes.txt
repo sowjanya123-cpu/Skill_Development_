@@ -1,0 +1,373 @@
+
+
+
+ Github Repo Link:
+https://github.com/sowjanya123-cpu/Skill_Development_
+
+Downbload git from:
+https://git-scm.com/downloads
+
+Note: Arrange/Organise files and folders neatly in your laptop.
+
+
+
+To copy the trainer repo:
+
+To update the trainer repo:
+$ git pull origin main
+
+Config commands:
+$ git config --global user.name "user_name"
+$ git config --global user.email "user_email"
+
+To copy my repo for read and write operations:
+Template:
+
+$ git clone https://PAT@github.com/user_name/repo_name
+
+3 commands to update our Repo:
+1. $ git add .
+From the current, mark all the files that need to be updated (Keepting the folder structure intact)
+Here the git creates a list of files to be updated)
+
+2. $ git commit -m "Relevant message"
+
+This creates the object that need to be sent to the remote repo (that need to be updated in the remote repo)
+
+3. $ git push origin main
+
+push is to update the remote repo from the local. The object is sent to the server when this command is run.
+
+main is the default branch which is created with every git repo.
+
+NOTE: When ever we run the PUSH command, the PULL is implicitly run 1st. And only then the PUSH is run.
+
+Bootrap Elements:
+container
+box
+inline-box
+form-control
+bg-light
+
+JS:
+let: To create a local variable (block scope)
+const: To create a local read only variable
+var: To create a global variable (life till end of the App)
+
+Bootsrap
+
+3 differant ways of enabling Bootsrap to our design.
+
+1. Use the CDN
+2. Link to the locally stored bootstrap file
+3. Install bootstrap uing the CLI such as npm, pip etc.
+-----------------------------------------------------------------
+Creating a React app using Vite is faster and more efficient:
+
+Step 1: Install Node.js
+Ensure that **Node.js** is installed on your machine. You can check by running:
+
+$ node -v
+
+If not installed, download and install it from [Node.js official website](https://nodejs.org/)
+
+Step 2: Create a New React App with Vite
+Run the following command in your terminal to create a new React app using Vite:
+
+$ npm create vite@latest my-react-app --template react
+
+Replace my-react-app with your desired project name.
+--template react specifies that we are creating a React app.
+
+Step 3: Navigate to Your Project
+Move into the project directory:
+
+cd my-react-app
+
+Step 4: Install Dependencies
+Run the following command to install the required dependencies:
+
+$ npm install
+
+Step 5: Start the Development Server
+Run the command:
+
+$ npm run dev
+
+This will start the development server, and it will display a local URL
+(e.g.: http://localhost:5173/). 
+Open it in your browser to see your React app running.
+
+Step 6: Project Structure
+Your Vite project will have a structure like this:
+
+my-react-app/
+│── node_modules/
+│── public/
+│── src/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│── .gitignore
+│── index.html
+│── package.json
+│── README.md
+│── vite.config.js
+
+src/main.jsx is Entry point of the React app.
+src/App.jsx is Main component.
+vite.config.js is Vite configuration file.
+
+Step 7: Modify the App
+You can edit src/App.jsx to customize your React application.
+
+Example:
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, Vite + React!</h1>
+    </div>
+  );
+}
+export default App;
+
+Run the React App:
+$ 
+---------------------------------------------------------------
+Save the file and see changes instantly in the browser.
+----------------------------------------
+function MyApp() {
+  return (
+    <div className="App">
+      <h2>
+        React Program One
+      </h2>
+      <p>
+        Starts with index.html
+        index.js and app.js are the framework tools that gives us bundle.js and in the browser index.html linked with bundle.js is rendered.
+      </p>
+    </div>
+  );
+}
+export default MyApp;
+------------------------------------
+React Assignments:
+
+1. Consider a button with default color btn-success
+On click it must change to btn-warning and again on click it must change to btn-danger and again when clicked, it must change back to btn-success
+
+2. Take a text box and read a single digit number from 1 to 5 only (validate the same using reg-ex in js function)
+
+Now display this digit on the button in respective word.
+----------------------------------------------------------------
+React Example1:
+
+
+function App() {
+  return (
+    <div className="App">
+      <h2>
+        React Program One
+      </h2>
+      <p>
+        Starts with index.html
+        index.js and app.js are the framework tools that gives us bundle.js and in the browser index.html linked with bundle.js is rendered.
+      </p>
+    </div>
+  );
+}
+export default App;
+----------------------------------------------------------------
+React Example2:
+
+HelloWorld.js
+
+function HelloWorld () {
+  return (
+    <p style={{color:"blue", fontSize:"40px" } }>
+      Child App Content
+    </p>
+  )
+}
+export default HelloWorld;
+----------------------------------------------------------------
+React Example3:
+
+function App () {
+  return (
+    <p>
+      Parent App Content
+    </p>
+	<HelloWorld> </HelloWorld>
+	// <HelloWorld/>
+  )
+}
+export default HelloWorld;
+----------------------------------------------------------------
+React Example4:
+
+import { Component } from 'react';
+
+export deafult class AnimalLover extends Component {  
+    render() {
+    return (
+      <h2> 
+            I am Animal Lover
+      </h2>
+    )
+  }
+}
+----------------------------------------------------------------
+React Example5:
+
+export default class IncrementCounter extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {count:10}
+        this.doCount = this.doCount.bind(this)
+    }
+    incrementCount () {
+        this.setState({countNum: this.state.count + 1})    
+    }
+    render () {
+        return (
+        <div>
+            <h2> I am Animal Lover </h2>
+            <input type="button" value={this.state.countNum} onClick={this.incrementCount} />
+        </div>
+          )
+    }
+}
+----------------------------------------------------------------
+React Example6:
+
+import { Component } from "react";
+
+export class Trainer extends Component {
+    constructor(props) {
+        super(props);       
+        this.state = {trainerList: [{id: 101, name:'Nithin', technology:'MERN', location:'Mysuru'}, {id: 102, name:'Maheswaran', technology:'MEAN', location:'Tiruchirapalli'} ] }
+    }
+    render () {
+        let fnEachTrainer = (trainer) => {
+            return <tr>
+                <td> {trainer.id} </td>
+                <td> {trainer.name} </td>
+                <td> {trainer.technology} </td>
+                <td> {trainer.location} </td>    
+            </tr>;
+        };
+
+        let trainerRows = this.state.trainerList.map(fnEachTrainer);
+        return (
+            <>
+                <div className="myTopDiv">
+                    <h2> Trainers List </h2>
+                    <input type="button" id="add" value="Add Trainer"/>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th> ID </th>
+                            <th> Name </th>
+                            <th> Technology </th>
+                            <th> Location </th>
+                        </tr>
+                        {trainerRows}
+                    </table>
+                </div>
+            </>
+        )
+    }
+}
+----------------------------------------------------------------
+React Example6:
+
+Shapes.js
+
+import { Component } from "react";
+
+export class Square extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div class="square"></div>
+        )
+    }
+}
+
+export class CornerCurvedSquare extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div class="corner-curved-square"></div>
+        )
+    }
+}
+
+export class Circle extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div class="circle"></div>
+        )
+    }
+}
+----------------
+App.js Code:
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Circle, CornerCurvedSquare, Square } from './Shapes';
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <div>
+          <a href="/square">Square</a> 
+           <a href="/circle">Circle</a>
+           <a href="/curve-square">Curved-Square</a>
+        </div>
+          <Routes>
+            <Route path="/" element={<Square/>} />
+            <Route path="/square" element={<Square/>} />
+            <Route path="/circle" element={<Circle/>} />
+            <Route path="/curve-square" element={<CornerCurvedSquare/>} />
+          </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+---------------------------------
+shapes.css
+.square {
+	width: 400px;
+	height: 400 px;
+	border: 2px solid brown;
+	background-color: cyan;
+}
+.cornerCurvedsquare {
+	width: 400px;
+	height: 400 px;
+	border: 2px solid brown;
+	background-color: cyan;
+	border-radius: 3px;
+}
+.cornerCurvedsquare {
+	width: 400px;
+	height: 400 px;
+	border: 2px solid brown;
+	background-color: cyan;
+	border-radius: 50px;
+}
+------------------------------------------------
